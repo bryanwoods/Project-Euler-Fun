@@ -5,8 +5,10 @@
     What is the largest prime factor of the number 600851475143 ?
 */
 
-void largest_prime_factor_of(long int limit, int factor)
+void largest_prime_factor_of(long int limit)
 {
+    int factor = 2;
+
     while (limit > 1) {
         (limit % factor == 0) ? (limit /= factor) : (factor += 1);
     }
@@ -15,5 +17,5 @@ void largest_prime_factor_of(long int limit, int factor)
 
 main ()
 {
-    largest_prime_factor_of(600851475143, 2);
+    largest_prime_factor_of(600851475143);
 }
