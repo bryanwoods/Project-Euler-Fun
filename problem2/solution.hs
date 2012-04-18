@@ -13,4 +13,4 @@ main :: IO ()
 main =
   do putStrLn "What is the maximum fibonacci value you would like to compute?"
      max <- readLn
-     putStrLn $ show . sum . filter even $ fibsTo max
+     putStrLn . show . sum . filter even $ fibsTo max
