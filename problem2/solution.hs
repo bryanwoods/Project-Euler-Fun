@@ -9,6 +9,7 @@ fib n = fib (n-1) + fib (n-2)
 fibsTo :: Int -> [Int]
 fibsTo max = takeWhile (<= max) [fib x | x <- [0..]]
 
+main :: IO ()
 main =
   do putStrLn "What is the maximum fibonacci value you would like to compute?"
      max <- readLn
