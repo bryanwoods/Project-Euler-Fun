@@ -10,11 +10,11 @@ reverse = (str) ->
   str.split('').reverse().join('')
 
 palindrome = (int) ->
-  int.toString() == reverse(int.toString())
+  int.toString() is reverse(int.toString())
 
-for fact1 in [0..999]
-  for fact2 in [fact1..999]
-    product = fact1 * fact2
+for i in [0..999]
+  for j in [i..999]
+    product = i * j
     largest = product if palindrome?(product) and product > largest
 
 console.log largest
