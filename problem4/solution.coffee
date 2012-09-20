@@ -16,6 +16,6 @@ do ->
   for i in [0..999]
     for j in [i..999]
       product = i * j
-      largest = product if palindrome?(product) and product > largest
+      largest = product if palindrome(product) and product > largest
 
   console.log largest
