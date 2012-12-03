@@ -1,6 +1,4 @@
-sumOfMultiplesInRange = (limit, mult1, mult2, sum=0) ->
-  for i in [0..limit] 
-    sum += i if i % mult1 == 0 || i % mult2 == 0
-  console.log sum
+result = (x for x in [1..999] when x % 3 is 0 or x % 5 is 0).
+  reduce (memo, num) -> memo + num
 
-sumOfMultiplesInRange(999, 3, 5)
+console.log(result)
